@@ -6,7 +6,7 @@
 
 //this is the readable version (the test requires the fewest number of characters possible)
 
-// var z=(l)=>{
+// z=(l)=>{
 //     let i = 1
 //     let ll = 1
 //     while(ll < l){
@@ -16,9 +16,9 @@
 //     return i
 // }
 
-var z=(l)=>{let i=1;let j=1;while(j<l){i++;j*=2}return j>l?i-1:i}
+z=(l)=>{let i=1;let j=1;while(j<l){i++;j*=2}return j>l?i-1:i}
 
 
 console.log(z(9136), 14)
 
-console.log('var z=(l)=>{let i=1;let j=1;while(j<l){i++;j*=2}return j>l?i-1:i}'.length)
+console.log('z=(l)=>{let i=1;let j=1;while(j<l){i++;j*=2}return j>l?i-1:i}'.length)
