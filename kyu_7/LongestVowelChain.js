@@ -4,18 +4,15 @@
 
 
 function solve(s){
-    let longest = 0;
     let cache = 0;
+    let longest = 0;
     let vowels = ['a', 'e', 'i', 'o', 'u'];
-    let sArray = s.split('').map(c => {
-        if (vowels.includes(c)) {
-            return c;
-        } else {
-            return
-        }
+    s.split('').forEach(c => {
+        vowels.includes(c) ? cache++ : cache = 0;
+        longest = cache > longest ? cache : longest;
     })
-    return sArray;
-   }
+    return longest;
+}
 
 
 
