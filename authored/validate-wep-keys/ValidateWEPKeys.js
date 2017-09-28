@@ -1,7 +1,7 @@
 
 /*
 TASK:
-create a function that checks whether a set of WEP keys, passed in as an array containing multiple keys (two-character pairs) concatenated into a single string, are valid in representing ONLY words (characters a-z and A-Z), spaces, and integers 1-9
+create a function that checks whether a set of WEP keys, passed in as multiple keys (two-character pairs) concatenated into a single string, are valid in representing ONLY words (characters a-z and A-Z), spaces, and integers 1-9
 
 RULES:
 if it is determined that each WEP key in the string represents an allowed character, return true
@@ -36,17 +36,17 @@ Good luck!  And if you'd like to add another language to this kata, please let m
 let validate = (keys) => {
     let keyArray = [];
     let temp = [];
-    for (i = 0; i < keys[0].length; i++) {
+    for (i = 0; i < keys.length; i++) {
         if (temp.length === 2) {
             keyArray.push(temp);
             temp = [];
-        } else if (i > keys[0].length - 2) {
+        } else if (i > keys.length - 2) {
             keyArray.push(temp)
         }
-        temp.push(keys[0][i].toUpperCase())
+        temp.push(keys[i].toUpperCase())
     }
     keyArray.forEach((c, i, a) => {
-        if (keys[0].length % 2) {
+        if (keys.length % 2) {
             a[i] = false;
         } else if (!c[0].match(/[2-7]+/)) {
             a[i] = false;
@@ -69,34 +69,31 @@ let validate = (keys) => {
 //test cases
 
 //true
-console.log(validate(['686920687579']), true);
-console.log(validate(['6869206368726973']), true);
-console.log(validate(['70726F6772616D6D696E67']), true);
-console.log(validate(['696e74657266616365']), true);
-console.log(validate(['3320626C696E64206D696365']), true);
-console.log(validate(['6c333374737033346b']), true);
-console.log(validate(['7065616E75742062757474657220616e64206A656C6C79']), true);
-console.log(validate(['7965737A656272617965737A656272617965737A656272617965737A656272617965737A65627261']), true);
-console.log(validate(['3030373135303063303037']), true);
-console.log(validate(['3534337a326435653973366131623868']), true);
-console.log(validate(['6865696e643834376169643761736b66']), true);
-console.log(validate(['7468317331737433737474683173317374337374746831733173743373747468317331737433737474683173317374337374']), true);
-
-
-
+console.log(validate('686920687579'), true);
+console.log(validate('6869206368726973'), true);
+console.log(validate('70726F6772616D6D696E67'), true);
+console.log(validate('696e74657266616365'), true);
+console.log(validate('3320626C696E64206D696365'), true);
+console.log(validate('6c333374737033346b'), true);
+console.log(validate('7065616E75742062757474657220616e64206A656C6C79'), true);
+console.log(validate('7965737A656272617965737A656272617965737A656272617965737A656272617965737A65627261'), true);
+console.log(validate('3030373135303063303037'), true);
+console.log(validate('3534337a326435653973366131623868'), true);
+console.log(validate('6865696e643834376169643761736b66'), true);
+console.log(validate('7468317331737433737474683173317374337374746831733173743373747468317331737433737474683173317374337374'), true);
 
 //false
-console.log(validate(['68692068757']), false); //contains uneven pairs
-console.log(validate(['3320626C696J64206D696365']), false); //contains invalid character
-console.log(validate(['6C133374737033346B']), false); //contains invalid character
-console.log(validate(['7965737B65627261']), false); //contains multiple invalid characters
-console.log(validate(['68656c6c6f2c3a61736466']), false); //contains multiple invalid characters
-console.log(validate(['7377616d706361747a2d62656177616d706361747a2d62656174']), false); //contains invalid key
-console.log(validate(['30303769733030636f2a6c']), false); //contains invalid key
-console.log(validate(['617364663635646636356466363564663635646636356466363564663635312f643522646473']), false); //contains multiple invalid keys
-console.log(validate(['74686973347233636FF6C']), false); //contains uneven pairs
-console.log(validate(['71756166717561671756166']), false)  //contains uneven pairs
-console.log(validate(['KDNBKS9Z8DNAEUBNASDFI']), false);  //contains random invalid characters
-console.log(validate(['74683173317384337374']), false); //contains invalid character
-console.log(validate(['3534337a32643 653973366131623868']), false); //contains invalid character
-console.log(validate(['7065616E757420627,7474657220616e64206A656C6C79']), false); //contains invalid character
+console.log(validate('68692068757'), false, 'contains uneven pairs');
+console.log(validate('3320626C696J64206D696365'), false, 'contains invalid character');
+console.log(validate('6C133374737033346B'), false, 'contains invalid character');
+console.log(validate('7965737B65627261'), false, 'contains multiple invalid characters');
+console.log(validate('68656c6c6f2c3a61736466'), false, 'contains multiple invalid characters');
+console.log(validate('7377616d706361747a2d62656177616d706361747a2d62656174'), false, 'contains invalid key');
+console.log(validate('30303769733030636f2a6c'), false, 'contains invalid key');
+console.log(validate('617364663635646636356466363564663635646636356466363564663635312f643522646473'), false, 'contains multiple invalid keys');
+console.log(validate('74686973347233636FF6C'), false, 'contains uneven pairs');
+console.log(validate('71756166717561671756166'), false, 'contains uneven pairs');
+console.log(validate('KDNBKS9Z8DNAEUBNASDFI'), false, 'contains random invalid characters');
+console.log(validate('74683173317384337374'), false, 'contains invalid character');
+console.log(validate('3534337a326435,53973366131623868'), false, 'contains invalid character');
+console.log(validate('3320626C696E642,6D696365'), false, 'contains invalid character');
