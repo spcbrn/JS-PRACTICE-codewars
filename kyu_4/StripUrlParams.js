@@ -23,8 +23,8 @@ const stripUrlParams = (url, params) => {
 
 
 
-console.log(stripUrlParams('www.codewars.com?a=1&b=2&a=2'), 'www.codewars.com?a=1&b=2')
-console.log(stripUrlParams('www.codewars.com?a=1&b=2&a=2', ['b']), 'www.codewars.com?a=1')
-console.log(stripUrlParams('www.codewars.com?a=1&b=2&a=1&b=3', ['b']))
-console.log(stripUrlParams('www.codewars.com?a=1&b=3', ['b']), 'www.codewars.com?a=1')
-console.log(stripUrlParams('www.codewars.com', ['b']), 'www.codewars.com')
+console.log(stripUrlParams('www.codewars.com?a=1&b=2&a=2'), '- www.codewars.com?a=1&b=2')
+console.log(stripUrlParams('www.codewars.com?a=1&b=2&a=2', ['b']), '- www.codewars.com?a=1')
+console.log(stripUrlParams('www.codewars.com?a=1&b=2&a=1&b=3', ['b']), '- www.codewars.com?a=1')
+console.log(stripUrlParams('www.codewars.com?a=1&b=3', ['b']), '- www.codewars.com?a=1')
+console.log(stripUrlParams('www.codewars.com', ['b']), '- www.codewars.com')
