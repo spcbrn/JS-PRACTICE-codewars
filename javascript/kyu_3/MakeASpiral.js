@@ -12,7 +12,6 @@ let spiralize = function(size) {
         }
     }
     let level = 0;
-    let inc = 1;
     while (level < Math.ceil(size/2)) {
         for (i = level; i < size; i++) {
             if (i === level) {
@@ -23,13 +22,13 @@ let spiralize = function(size) {
                     output[i][j] = 1 
                 }
             }
-            if (i > level && i < size-level) {
-                output[i][size-level-1] = 1
+            if (i > level && i < size - level) {
+                output[i][size - level - 1] = 1
             }
         }
-        for (l = size - 1 - level; l > 1; l--) {
-            if (l === size - 1 - level) {
-                for (m = size-(2+level); m > level; m--) {
+        for (l = size - level-1; l > 1; l--) {
+            if (l === size - level - 1) {
+                for (m = size - (2 + level); m > level; m--) {
                         output[l][m] = 1
                 }
             }
@@ -38,11 +37,10 @@ let spiralize = function(size) {
             } 
         }
         level+=2
-        
     }
     return output;
 }
 
 
-console.log(spiralize(20))
-// console.log(spiralize(10))
+console.log(spiralize(5))
+console.log(spiralize(15))
