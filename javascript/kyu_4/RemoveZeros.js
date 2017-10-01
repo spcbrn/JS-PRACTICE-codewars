@@ -1,5 +1,5 @@
 //URL: https://www.codewars.com/kata/remove-zeros/train/javascript
-//kyu:
+//kyu: 4
 
 
 const removeZeros = (a) => {
@@ -22,5 +22,6 @@ const removeZeros = (a) => {
     }
     return a;
 }
+
 
 console.log(removeZeros([7, 2, 3, '0', 4, 6, 0, 0, 13, 0, 78, 0, 0, 19, 14]), [7, 2, 3, 4, 6, 13, 78, 19, 14, '0', 0, 0, 0, 0, 0])
