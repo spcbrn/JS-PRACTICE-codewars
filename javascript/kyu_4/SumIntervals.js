@@ -17,10 +17,10 @@ function sumIntervals(intervals){
 
 
 
-  // var test1 = [[1,5]];
-  // var test2 = [[1,5],[6,10]];
-  // console.log(sumIntervals(test1), 4);
-  // console.log(sumIntervals(test2), 8);
+  var test1 = [[1,5]];
+  var test2 = [[1,5],[6,10]];
+  console.log(sumIntervals(test1), 4);
+  console.log(sumIntervals(test2), 8);
 
   var test3 = [[1,5],[1,5]];
   var test4 = [[1,4],[7, 10],[3, 5]];
@@ -28,4 +28,4 @@ function sumIntervals(intervals){
   console.log(sumIntervals(test4), 7);
 
   var test5 = [ [ 1, 20 ], [ 10, 20 ], [ 1, 6 ], [ 16, 19 ], [ 5, 11 ] ]
-  // console.log(sumIntervals(test5), 19);
+  console.log(sumIntervals(test5), 19);
