@@ -1,0 +1,1 @@
+console.log('weirdReverse=a=>_.reverse(a).length')
