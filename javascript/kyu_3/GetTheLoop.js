@@ -4,28 +4,29 @@
 
 
 function loop_size(node) {
-    let flag = 1;
+    let count = 1;
     let finished = false;
-    let clearing = true;
-    let count;
+    let clearing = false;
     let current = node;
     while (!finished) {
-        current.flag = flag;
-        if (!current.next.flag) {
+        if (!clearing) {
+          current.count = count;
+          if (!current.next.count) {
             current = current.getNext();
-            flag++
-        } else if (current.next.flag) {
-            count = flag - (current.next.flag - 1)
-            finished = true;
+            count++
+          } else if (current.next.count) {
+            count -= (current.next.count - 1)
+            current = node;
+            clearing = true;
+          }
         }
-    }
-    current = node;
-    while (clearing) {
-        if (current.flag) {
-            delete current.flag;
+        if (clearing) {
+          if (current.count) {
+            delete current.count;
             current = current.getNext()
-        } else if (!current.flag) {
-            clearing = false;
+          } else if (!current.count) {
+            finished = true;
+          }
         }
     }
     return count;
