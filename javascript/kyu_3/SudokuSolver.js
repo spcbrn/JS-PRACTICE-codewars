@@ -18,25 +18,10 @@ let puzzle = [
 
 
 function sudoku(p) {
-    let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let nums = [4, 5, 6, 7, 8, 9, 1, 2];
     let used = [];
-    p.forEach((c, i, a) => {
-        c.forEach((c2, i2, a2) => {
-            for (j = 0; j < c.length-1; j++) {
-                used.push(c[j])
-                used.push(p[j][i2])
-            }
-            used = used.filter((c, i) => c && used.indexOf(c) === i);
-            console.log(used)
-            if (!c2) {
-                valOp = nums.reverse().filter(c => !used.includes(c))
-                p[i][i2] = valOp[0]
-                console.log(valOp)
-            }
-            used = [];
-        })
-    })
-    console.log(p)
+
+
     return p;
 }
 
@@ -55,4 +40,4 @@ let solution = [
     [3,4,5,2,8,6,1,7,9]
 ];
 
-console.log(sudoku(puzzle) === solution)
+console.log(sudoku(puzzle))
