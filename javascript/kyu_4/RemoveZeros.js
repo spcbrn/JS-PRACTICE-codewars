@@ -1,4 +1,4 @@
-//URL: https://www.codewars.com/kata/remove-zeros/train/javascript
+//URL:  
 //kyu: 4
 
 
