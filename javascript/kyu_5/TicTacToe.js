@@ -18,7 +18,6 @@ function isSolved(board) {
         }
         level++;
     }
-    // return top;
 }
 
 
