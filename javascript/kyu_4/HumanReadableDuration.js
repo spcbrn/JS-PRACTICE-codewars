@@ -23,10 +23,38 @@ const formatDuration = (sec) => {
     s = hours ? s - (hours * units.hour) : s;  
     let minutes = Math.floor(s / units.minute);
     s = minutes ? s - (minutes * units.minute) : s;
+
     output.push(years, days, hours, minutes, s);
     
-    console.log(minutes)
-    return output;
+    let readable = '';
+    output.map((c, i) => {
+        if (i === 0 && c) {
+            output[i] = c > 1 ? c.toString() + ' years' : c.toString() + ' year';
+        } else if (i === 1 && c) {
+            output[i] = c > 1 ? c.toString() + ' days' : c.toString() + ' day';
+        } else if (i === 2 && c) {
+            output[i] = c > 1 ? c.toString() + ' hours' : c.toString() + ' hour';
+        } else if (i === 3 && c) {
+            output[i] = c > 1 ? c.toString() + ' minutes' : c.toString() + ' minute';
+        } else if (i === 4 && c) {
+            output[i] = c > 1 ? c.toString() + ' seconds' : c.toString() + ' second';
+        }
+    })
+    output.filter(c => c !== 0).forEach((c,i,a) => {
+        if (a.length === 1 || i === 0) {
+            readable += c;
+            return;
+        } else if (a.length > 1) {
+            if (i === a.length-1) {
+                readable += ' and ' + c;
+                return;
+            } else if (i > 0) {
+                readable += ', ' + c;
+                return;
+            }
+        }
+    })
+    return readable;
 }
 
 console.log(3600*24)
