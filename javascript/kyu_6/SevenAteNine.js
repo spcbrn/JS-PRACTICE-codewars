@@ -8,8 +8,7 @@ const hungrySeven = (a) => {
     if (!s.match(['789'])) {
         return a;
     } else {
-        s = s.replace(/789/gi, '897').split('');
-        s = s.map(c => c*1)
+        s = s.replace(/789/gi, '897').split('').map(c => c*1);
         return hungrySeven(s)
     }
 }
