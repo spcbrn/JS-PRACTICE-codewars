@@ -2,6 +2,21 @@
 //URL: https://www.codewars.com/kata/twice-linear
 //kyu: 4
 
+function bubbleSort(a)
+{
+    var swapped;
+    do {
+        swapped = false;
+        for (var i=0; i < a.length-1; i++) {
+            if (a[i] > a[i+1]) {
+                var temp = a[i];
+                a[i] = a[i+1];
+                a[i+1] = temp;
+                swapped = true;
+            }
+        }
+    } while (swapped);
+}
 
 const dblLinear = (n) => {
     let u = [1];
@@ -19,7 +34,7 @@ const dblLinear = (n) => {
     return u[n]
 }
 
-
+console.log(dblLinear(4), 9)
 console.log(dblLinear(10), 22)
 console.log(dblLinear(20), 57)
 console.log(dblLinear(30), 91)
