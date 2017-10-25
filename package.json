@@ -1,0 +1,23 @@
+{
+  "name": "CodeWars",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spcbrn/JS-PRACTICE-codewars.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spcbrn/JS-PRACTICE-codewars/issues"
+  },
+  "homepage": "https://github.com/spcbrn/JS-PRACTICE-codewars#readme",
+  "dependencies": {
+    "underscore": "^1.8.3"
+  }
+}

@@ -1,7 +1,30 @@
-console.log('weirdReverse=a=>_.reverse(a).length')
 
-let test = [];
+function example1() {
+    var person = {
+        name: 'Edward',
+        trade: 'Developer'
+    };
+    return person
+}
 
-test[0] = 'asdf';
+console.log(example1())
 
-console.log(test)
+
+function ExampleConstructor(name, trade) {
+    this.name = name;
+    this.trade = trade;
+    return {
+        name: this.name,
+        trade: this.trade
+    }
+}
+
+var edward = new ExampleConstructor('Edward', 'Developer')
+var chris = new ExampleConstructor('Chris', 'Hacker')
+
+var now = new Date()
+
+console.log(now)
+
+console.log(edward)
+console.log(chris)
