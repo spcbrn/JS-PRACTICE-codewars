@@ -1,5 +1,5 @@
 {
-  "name": "CodeWars",
+  "name": "codewars",
   "version": "1.0.0",
   "description": "",
   "main": "test.js",
@@ -10,7 +10,6 @@
     "type": "git",
     "url": "git+https://github.com/spcbrn/JS-PRACTICE-codewars.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
