@@ -20,13 +20,13 @@ const setMaker = () => {
         }
     }
     shuffle(set)
-    return set.join('\n')
+    return set.join('|')
 }
 
 
 
-const input1 = '3\n14\n5\n19\n18\n1\n8\n11\n2';
-const input2 = '19\n5\n7\n8\n14\n17\n11\n13\n1';
+// const input1 = '3\n14\n5\n19\n18\n1\n8\n11\n2';
+// const input2 = '19\n5\n7\n8\n14\n17\n11\n13\n1';
 const input3 = setMaker();
 // const input4 = setMaker();
 // const input5 = setMaker();
@@ -49,11 +49,13 @@ const bitVectorSort = (set) => {
             output.push(i)
         }
     }
-    return output.join('\n')
+    return output.join('|')
 }
 
-console.log(bitVectorSort(input1))
-console.log(bitVectorSort(input2))
-console.log(bitVectorSort(input3))
+
+// console.log(bitVectorSort(input1))
+// console.log(bitVectorSort(input2))
 // console.log(bitVectorSort(input4))
 // console.log(bitVectorSort(input5))
+
+console.log(input3)
