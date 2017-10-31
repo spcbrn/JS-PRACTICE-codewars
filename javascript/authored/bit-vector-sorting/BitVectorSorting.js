@@ -47,9 +47,3 @@ const bitVectorSort = (set) => {
     }
     return output.join('|')
 }
-
-
-// console.log(bitVectorSort(input1))
-
-
-console.log(input3)

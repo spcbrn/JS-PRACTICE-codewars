@@ -14,15 +14,14 @@ const shuffle = (a) => {
 
 const setMaker = () => {
     let set = [];
-    for (i=0; i<100; i++) {
+    for (i=0; i<5000; i++) {
         let rand = Math.floor(Math.random() * (9 - 1) + 1)
-        if (rand > 4) {
+        if (rand > 7) {
             set.push(i)
         }
     }
     shuffle(set)
-    return set.join('|')
+    return set.join('/n')
 }
 
-
-console.log(setMaker())
+console.log(JSON.stringify(setMaker()))
