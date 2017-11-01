@@ -5,8 +5,7 @@ const toBits = (set) => {
         bitmap[i] = 0;
     }
     for (i=0; i < vals.length; i++) {
-        let idx = vals[i]*1;
-        bitmap[idx] = 1
+        bitmap[vals[i]] = 1
     }
     return bitmap;
 }
