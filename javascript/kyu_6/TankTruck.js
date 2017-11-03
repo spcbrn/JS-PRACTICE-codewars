@@ -7,7 +7,7 @@ const tankvol = (h, d, vt) => {
     let rad = d/2;
     let o = 2 * (Math.acos((rad-h)/rad));
     let len = vt/(Math.PI*Math.pow(rad, 2))
-    enet a = Math.floor(((1/2) * Math.pow(rad, 2) * (o-Math.sin(o))) * len);
+    let a = Math.floor(((1/2) * Math.pow(rad, 2) * (o-Math.sin(o))) * len);
     return a;
 }
 
