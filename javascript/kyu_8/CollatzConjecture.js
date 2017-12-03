@@ -14,7 +14,7 @@ const hotpo = (n, c) => {
     count++
     return hotpo((n/2), count);
   }
-}
+} 
 
 const hotpo = (n, c=0) => n <= 1 ? c : hotpo(n % 2 ? 3*n+1 : n/2, c++)
 

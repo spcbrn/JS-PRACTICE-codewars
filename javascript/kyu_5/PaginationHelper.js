@@ -30,5 +30,3 @@ PaginationHelper.prototype.pageItemCount = function(pageIndex) {
 PaginationHelper.prototype.pageIndex = function(itemIndex) {
 
 };
-
-console.log(test.pageItemCount(3))
