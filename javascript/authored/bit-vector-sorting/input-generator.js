@@ -2,7 +2,7 @@ const shuffle = (a) => {
     var i = 0
       , j = 0
       , temp = null
-  
+
     for (i = a.length - 1; i > 0; i -= 1) {
       j = Math.floor(Math.random() * (i + 1))
       temp = a[i]
@@ -25,3 +25,5 @@ const setMaker = () => {
 }
 
 console.log(JSON.stringify(setMaker()))
+
+//javascript is a fun language to leverage and play with!
