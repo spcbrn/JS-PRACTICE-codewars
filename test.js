@@ -18,4 +18,4 @@ var mult=r=>r.reduce((a,b)=>a*b)
 
 let testArr = [2, 2];
 
-console.log(sub(testArr))
+console.log(div(testArr))
