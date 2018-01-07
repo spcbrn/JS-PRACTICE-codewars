@@ -25,5 +25,3 @@ const setMaker = () => {
 }
 
 console.log(JSON.stringify(setMaker()))
-
-//javascript is a fun language to leverage and play with!

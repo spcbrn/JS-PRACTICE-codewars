@@ -18,4 +18,3 @@ var mult=r=>r.reduce((a,b)=>a*b)
 
 let willIt = 12;
 willIt %=1.13543653;
-console.log(willIt)
