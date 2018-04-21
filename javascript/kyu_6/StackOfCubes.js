@@ -2,6 +2,7 @@
 //URL: https://www.codewars.com/kata/build-a-pile-of-cubes
 //kyu: 6
 
+//hyper verbose (my) solution:
 let nHash = {};
 const findNb = vol => {
     let topTotal = 0;
@@ -22,6 +23,13 @@ const findNb = vol => {
     }
     return -1;
 }
+
+//top cw solution (math I can scarcely grasp):
+// const findNb = m => {
+//     var n = 0
+//     while (m > 0) m -= ++n**3
+//     return m ? -1 : n
+// }
 
 
 
